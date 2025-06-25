@@ -1,93 +1,112 @@
 # SmartFamPantry App
 
-**SmartFamPantry** is a full-stack application designed to help families manage their household pantry inventory, track item expiry dates, and coordinate grocery needs efficiently.
-
----
+**SmartFamPantry** is a full-stack app that helps families manage their pantry inventory, track expiry dates, and coordinate grocery needs efficiently.
 
 ## Tech Stack
 
 - **Frontend:** React Native (Expo)  
 - **Backend:** FastAPI (Python 3.12)  
 - **Database:** Firebase Firestore  
-- **Demo & Testing:** Expo Go app for mobile preview
-
----
+- **Demo:** Expo Go app for mobile preview
 
 ## Getting Started
 
 ### Clone the Repository
 
-First, clone the project repository to your local machine:
-
 ```bash
 git clone https://github.com/your-username/SmartFamPantryApp.git
 cd SmartFamPantryApp
 
-Prerequisites
+# Project Setup Guide
 
-    Node.js and npm installed on your machine
+## Prerequisites
 
-    Python 3.12 installed (required for backend compatibility)
+- Node.js and npm installed
+- Python 3.12 installed
+- Expo CLI (run via `npx expo start`)
+- Firebase project with Firestore enabled and service account JSON key
 
-    Expo CLI (comes with npx expo start)
+---
 
-    Firebase project with Firestore enabled and service account key
+## Frontend Setup
 
-Frontend Setup (SmartFamPantryApp)
+1. Navigate to the folder containing `package.json`
 
-    Navigate to the folder containing package.json.
+2. Install dependencies:
 
-    Install dependencies:
+    ```bash
+    npm install
+    ```
 
-npm install
+3. Open `services/groceryapi.js` and update the IP address to your local machine's IPv4 address:
 
-Update the IP address in services/groceryapi.js to your local machine’s IPv4 address:
+    - On Windows, run `ipconfig` to find the IPv4 address (e.g., `192.168.x.x`)
 
-    On Windows, run ipconfig in terminal to find IPv4 address (e.g., 192.168.x.x).
+4. Start the Expo development server:
 
-Start the Expo development server:
-
+    ```bash
     npx expo start
+    ```
 
-    On your mobile device, install Expo Go from the app store.
+5. Install **Expo Go** from your device's app store
 
-    Ensure your mobile device and development machine are connected to the same Wi-Fi network.
+6. Connect your device and development machine to the **same Wi-Fi network**
 
-    Scan the QR code shown in the terminal or Expo DevTools with your phone camera.
+7. Scan the QR code in the terminal or Expo DevTools to launch the app on your device
 
-    The app will launch on your device within Expo Go.
+---
 
-Backend Setup (SmartFamPantryAppBackend)
+## Backend Setup
 
-    Navigate to the backend project directory.
+1. Navigate to the backend directory
 
-    Create and activate a Python 3.12 virtual environment:
+2. Create and activate a Python 3.12 virtual environment:
 
-# Windows PowerShell
-py -3.12 -m venv venv
-.\venv\Scripts\activate.ps1
+    ```bash
+    py -3.12 -m venv venv
+    ```
 
-Install required dependencies:
+    - **Windows PowerShell:**
 
-pip install -r requirements.txt
+      ```powershell
+      .\venv\Scripts\activate.ps1
+      ```
 
-Go to your Firebase Console > Project > Settings > Service Accounts, and download your private key JSON file.
+    - **Command Prompt:**
 
-Rename the file to firebase_key.json and place it in the same directory as main.py.
+      ```cmd
+      venv\Scripts\activate.bat
+      ```
 
-Start the FastAPI backend server:
+3. Install dependencies:
 
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Access the API documentation and test endpoints at:
+4. Download your Firebase private key JSON file from the Firebase Console under:
 
+    ```
+    Project Settings > Service Accounts
+    ```
+
+5. Rename the file to `firebase_key.json` and place it in the same directory as `main.py`
+
+6. Run the backend server:
+
+    ```bash
+    uvicorn main:app --reload --host 0.0.0.0 --port 8000
+    ```
+
+7. Access the API docs at:
+
+    ```
     http://localhost:8000/docs
+    ```
 
-Important Notes
+---
 
-    Both frontend and backend servers should be running concurrently in separate terminals.
+## Notes
 
-    Make sure your mobile device and development machine are on the same Wi-Fi network for Expo Go to connect properly.
-
-    The mobile_movie_app folder is only for demo/testing purposes and not part of the main app.
-
+- Run frontend and backend servers concurrently in **separate terminals**
+- Ensure your **mobile device** and development machine are on the **same network** for Expo Go connectivity
