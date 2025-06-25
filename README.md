@@ -104,5 +104,3 @@ http://localhost:8000/docs
 Notes
 
     Run frontend and backend servers concurrently in separate terminals
-
-    Ensure your mobile device and development machine are on the same network for Expo Go connectivity
