@@ -17,96 +17,92 @@
 git clone https://github.com/your-username/SmartFamPantryApp.git
 cd SmartFamPantryApp
 
-# Project Setup Guide
+Prerequisites
 
-## Prerequisites
+    Node.js and npm installed
 
-- Node.js and npm installed
-- Python 3.12 installed
-- Expo CLI (run via `npx expo start`)
-- Firebase project with Firestore enabled and service account JSON key
+    Python 3.12 installed
 
----
+    Expo CLI (run via npx expo start)
 
-## Frontend Setup
+    Firebase project with Firestore enabled and service account JSON key
 
-1. Navigate to the folder containing `package.json`
+Frontend Setup
 
-2. Install dependencies:
+    Navigate to the folder containing package.json
 
-    ```bash
-    npm install
-    ```
+    Install dependencies:
 
-3. Open `services/groceryapi.js` and update the IP address to your local machine's IPv4 address:
+bash
 
-    - On Windows, run `ipconfig` to find the IPv4 address (e.g., `192.168.x.x`)
+npm install
 
-4. Start the Expo development server:
+    Open services/groceryapi.js and update the IP address to your local machine's IPv4 address:
 
-    ```bash
-    npx expo start
-    ```
+    On Windows, run ipconfig to find the IPv4 address (e.g., 192.168.x.x)
 
-5. Install **Expo Go** from your device's app store
+    Start the Expo development server:
 
-6. Connect your device and development machine to the **same Wi-Fi network**
+bash
 
-7. Scan the QR code in the terminal or Expo DevTools to launch the app on your device
+npx expo start
 
----
+    Install Expo Go from your device's app store
 
-## Backend Setup
+    Connect your device and development machine to the same Wi-Fi network
 
-1. Navigate to the backend directory
+    Scan the QR code in the terminal or Expo DevTools to launch the app on your device
 
-2. Create and activate a Python 3.12 virtual environment:
+Backend Setup
 
-    ```bash
-    py -3.12 -m venv venv
-    ```
+    Navigate to the backend directory
 
-    - **Windows PowerShell:**
+    Create and activate a Python 3.12 virtual environment:
 
-      ```powershell
-      .\venv\Scripts\activate.ps1
-      ```
+bash
 
-    - **Command Prompt:**
+py -3.12 -m venv venv
 
-      ```cmd
-      venv\Scripts\activate.bat
-      ```
+    Windows PowerShell:
 
-3. Install dependencies:
+powershell
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+.\venv\Scripts\activate.ps1
 
-4. Download your Firebase private key JSON file from the Firebase Console under:
+    Command Prompt:
 
-    ```
-    Project Settings > Service Accounts
-    ```
+cmd
 
-5. Rename the file to `firebase_key.json` and place it in the same directory as `main.py`
+venv\Scripts\activate.bat
 
-6. Run the backend server:
+    Install dependencies:
 
-    ```bash
-    uvicorn main:app --reload --host 0.0.0.0 --port 8000
-    ```
+bash
 
-7. Access the API docs at:
+pip install -r requirements.txt
 
-    ```
-    http://localhost:8000/docs
-    ```
+    Download your Firebase private key JSON file from the Firebase Console under:
 
----
+text
 
-## Notes
+Project Settings > Service Accounts
 
-- Run frontend and backend servers concurrently in **separate terminals**
-- Ensure your **mobile device** and development machine are on the **same network** for Expo Go connectivity
+    Rename the file to firebase_key.json and place it in the same directory as main.py
+
+    Run the backend server:
+
+bash
+
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+    Access the API docs at:
+
+text
+
+http://localhost:8000/docs
+
+Notes
+
+    Run frontend and backend servers concurrently in separate terminals
+
+    Ensure your mobile device and development machine are on the same network for Expo Go connectivity
