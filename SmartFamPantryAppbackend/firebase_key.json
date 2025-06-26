@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "smartfampantryapp",
+  "private_key_id": "69a41b24e8fd83c90c837ba8a7d73f5b7e456a4e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDYDP0aPtZ/U4lr\ntAmtVvFKxNKFzbcGmVwAKp5wT/tBwNaryLANftVi9AMh1Pg/5/ICvjQGlef2VcU0\n81mK8csOpC44+g3fObE9xVzovfvmPt+Iu/IqHBZbw6SoPoaAIdmUsE9jyV82sBL1\nAUWK4hyTlSjKd7F/2jHQpenNiZmRvCoe1gdU8W+CL6EF4H+THt9RpWDePkbqZZ6t\nAHM7XgmZj9/ap3xEFaiXY4B8mPkJIixVJwkgQHNg73fvfVoXV4NmeZUy1MXEC+dM\nZRr0dqZlOO2SpB7vcn8pcyj3XatI8uB9CEqFsV76bV1wAWL2ddnpgLUNQY/1UJwG\nCXnYi2IxAgMBAAECggEAA0S1iMHL+gjCDMIATjnxLCjUeDuZpej4pUQ/ybpNBlRv\n7vD6GFcrjFvdhwPPNlzIeooE9JdMlzt6kHOwvmdMY4ogbKJcRrzrQXBomJkErDnV\n5P42YnSSskRQO68X9uzkKzGcXtmlVgkFfWU9t4VWijVExOTZB6KN876Jzh8jdorZ\ngOTYoomjOA0XjGPZq3pe9kuh5WKRWVhuQ4HUJGnDWryDYmHX06YD65Ocum5uq1iJ\nq55YYu0HngcQGNI9ubstrAFO6U2kf9RsFGcX89D1Zrz1ZdFlVbQAz9YuF9210xzp\nIrxQ57Y6J8gQOVvCmRinKkJZbnLD9tgXOBzGsFL84QKBgQDshtt5ykpI2As5aBd5\nSpqgfs2wQ/ANVjSE8IaB3kW6qd6WgmIhQTVe/4ptTotdr+rGBX+c4arcpaLHplYK\n3Emj7FVAJ/83wrWBysVTQ+xZt+Ujn0slzJdnaFNariwqDcSTxp0IGWmlymfnJU/o\nPYf0IiW1sHa2Hmuvkcr8VP4OIQKBgQDp1pGyF6FbEKLewMhpdudAovPJEFE7EeJq\nM3zbh+K1enuYi7WK6VqhIpyfjgBpfYnUTQkbIOVEmxLRNI38E+lglWeJeo+haRPu\nOdAaVyQ73/To4XBmDzmonqva3J419b32TaFNW4K+I8fQEpGaAMKUaqNLt08cG1aV\nrM9E06oyEQKBgQCHJufyR6z6wrhnLRt8qyx/2PUfazKX7FJGREoXmzKs3rPZvNbl\nuaUNi2dF3kO0XPkB/dJVin1fZyYEfv9bZVSO3lQ4PKKQ8ilU6NCoK3+6JGJCYJtI\nFgfNhsdaYXvK6+MPrcW9AwhjO6zzX1axlbdBwOFbWGH83pUZ1WzvkoE5AQKBgADY\nesxnE3lN1RjzH4ZqHKn6LOGEQpbxGJ2DtCbjFenMGJhToQNwlphQlLpq/AtlndL7\nuFW1x754xRemlgDcXZKw16ACpnRR+fV5lgwSVpo01CDnd82WroGymTKAa74MNnSm\nkTfDZfSkEnvpJUemSw3YWODUN+AFJUoDRvibv1jRAoGAJfxMwZgBOagOusFQ8Jg/\nJ97r02Q3HIPnmY3B34/ihs4Q0LwUJWnvKe/uLMbefNAgCUIk22wUyyds844w8CSt\n8ippUcTyFtAbrJX00krf9YFIL5aRqziaz8jFBwXJXdpgd55XKmmI9SzEueIKIwJW\nPrCb//GWBK8MQdeOHyIMZ3c=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@smartfampantryapp.iam.gserviceaccount.com",
+  "client_id": "112190662691513271176",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40smartfampantryapp.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

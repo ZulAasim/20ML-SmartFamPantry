@@ -1,39 +1,4 @@
-// // app/(tabs)/index.tsx
-// import { View, Text, StyleSheet } from 'react-native';
-// import { useUser } from '../../context/UserContext'; // Ensure this path is correct for your UserContext
 
-// export default function IndexScreen() {
-//   const { user, familyId } = useUser(); // Get user details
-//   console.log(`IndexScreen: Rendered. User: ${user ? user.email : 'null'}, FamilyID: ${familyId}`); // Add this log
-
-//   return (
-//     <View style={styles.container}>
-//       <Text style={styles.title}>Welcome to the App!</Text>
-//       {user && <Text>Logged in as: {user.email}</Text>}
-//       {familyId && <Text>Family ID: {familyId}</Text>}
-//       <Text style={styles.subtitle}>If you see this, the redirect to tabs worked!</Text>
-//     </View>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: '#fff',
-//   },
-//   title: {
-//     fontSize: 24,
-//     fontWeight: 'bold',
-//     marginBottom: 20,
-//   },
-//   subtitle: {
-//     marginTop: 10,
-//     fontSize: 16,
-//     color: 'green',
-//   }
-// });
 
 // app/index.tsx
 import { View, Text, StyleSheet, Image } from 'react-native';

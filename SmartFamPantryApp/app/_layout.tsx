@@ -55,21 +55,18 @@ function RootAuthRedirector() {
 export default function RootLayout() {
   return (
     <UserProvider>
+      <View style={{ flex:1}}>
       <RootAuthRedirector />
       <Stack screenOptions={{ headerShown: false }}>
-        {/* IMPORTANT: Ensure 'auth' refers to your app/auth/_layout.tsx */}
-        <Stack.Screen name="auth" options={{ headerShown: false }} />
-        {/* IMPORTANT: Ensure '(tabs)' refers to your app/(tabs)/_layout.tsx */}
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        {/* Ensure 'onboarding' refers to your app/onboarding.tsx */}
-        <Stack.Screen name="onboarding" options={{ headerShown: false }} />
-        {/* Recommended: A not-found screen for unhandled routes */}
-        <Stack.Screen name="+not-found" options={{ headerShown: false }} />
+        <Stack.Screen name="auth" options={{ headerShown: false }}/>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }}/>
+        <Stack.Screen name="onboarding" options={{ headerShown: false }}/>
+        <Stack.Screen name="+not-found" options={{ headerShown: false }}/>
       </Stack>
+      </View>
     </UserProvider>
   );
 }
-
 const styles = StyleSheet.create({
   loadingContainer: {
     flex: 1,
