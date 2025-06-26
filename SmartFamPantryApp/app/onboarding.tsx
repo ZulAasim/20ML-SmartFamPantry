@@ -2,7 +2,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Alert, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { db, auth } from '../firebaseConfig';
-import { doc, setDoc, getDoc, updateDoc, arrayUnion } from 'firebase/firestore';
+import { doc, setDoc, getDoc, updateDoc, arrayUnion } from 'firebase/firestore'; // Keep updateDoc for family members arrayUnion
 import { useUser } from '../context/UserContext';
 import { useRouter } from 'expo-router';
 import { v4 as uuidv4 } from 'uuid';
@@ -82,10 +82,11 @@ const OnboardingScreen: React.FC = () => {
         console.log('Family document updated with new member:', user.uid);
       }
 
+      // --- CRITICAL FIX HERE: Use setDoc with merge: true instead of updateDoc ---
       const userDocRef = doc(db, 'users', user.uid);
-      await updateDoc(userDocRef, {
+      await setDoc(userDocRef, { // Changed from updateDoc to setDoc
         familyId: finalFamilyId,
-      });
+      }, { merge: true }); // Added { merge: true }
       console.log('User profile updated with familyId:', finalFamilyId);
 
       Alert.alert('Success', 'Family setup complete! Entering the app...');

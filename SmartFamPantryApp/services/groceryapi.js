@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const API_PORT = 8000 
 
-const API_BASE_URL = 'http://MACHINEIPADDR:8000'; // Example: REPLACE THIS WITH YOUR MACHINE'S ACTUAL IP
+const API_BASE_URL = 'http://34.171.187.27:8000'; // Example: REPLACE THIS WITH YOUR MACHINE'S ACTUAL IP
 
 const api = axios.create({
   baseURL: API_BASE_URL,

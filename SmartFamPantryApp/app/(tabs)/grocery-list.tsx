@@ -232,7 +232,7 @@ const GroceryListScreen: React.FC = () => {
      {groceries.map((item) => (
        <View key={item.id} style={styles.itemCard}>
          <View style={{ flex: 1 }}>
-           <Text style={styles.itemTitle}>{item.name} ({item.quantity})</Text>
+           <Text style={styles.itemTitle}>{`${item.name} (${item.quantity})`}</Text>
            <Text style={styles.itemText}>Category: {item.category || 'N/A'}</Text>
            <Text style={styles.itemText}>Added by: {item.addedBy}</Text>
          </View>
