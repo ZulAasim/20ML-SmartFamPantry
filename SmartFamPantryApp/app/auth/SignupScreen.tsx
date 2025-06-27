@@ -3,7 +3,7 @@ import React, { useState, useCallback } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Alert, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { auth, db } from '../../firebaseConfig.js';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { doc, setDoc } from 'firebase/firestore'; // Only setDoc for initial user profile (without familyId)
+import { doc, setDoc } from 'firebase/firestore';
 import { useRouter } from 'expo-router';
 
 const SignupScreen: React.FC = () => {
@@ -33,23 +33,16 @@ const SignupScreen: React.FC = () => {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const signedUpUser = userCredential.user;
       console.log('Signup successful. Firebase Auth UID:', signedUpUser.uid);
-
-      // Create initial user profile document in Firestore, but WITHOUT familyId yet.
-      // The onboarding screen will handle setting the familyId.
       const userDocRef = doc(db, 'users', signedUpUser.uid);
       await setDoc(userDocRef, {
         uid: signedUpUser.uid,
         email: signedUpUser.email,
-        // familyId: null or undefined initially, will be set by onboarding
         createdAt: new Date(),
-      }, { merge: true }); // Use merge: true just in case, though setDoc would overwrite
+      }, { merge: true }); 
 
       console.log('Initial user profile created in Firestore for UID:', signedUpUser.uid);
 
       Alert.alert('Success', 'Account created successfully! Now set up your family.');
-      // No explicit router.replace here. RootAuthRedirector will handle
-      // redirecting to /onboarding because familyId will be null initially.
-
     } catch (error: any) {
       Alert.alert('Error', error.message);
       console.error('Signup Error:', error.message);
@@ -90,7 +83,7 @@ const SignupScreen: React.FC = () => {
       />
 
       <Button title={loading ? "Creating Account..." : "Sign Up"} onPress={handleSignup} disabled={loading} />
-      {loading && <ActivityIndicator size="small" color="#0000ff" style={{ marginTop: 10 }} />}
+      {loading ? <ActivityIndicator size="small" color="#0000ff" style={{ marginTop: 10 }} /> : null}
 
       <View style={styles.loginPrompt}>
         <Text>Already have an account?</Text>

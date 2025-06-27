@@ -99,7 +99,6 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
       isMounted.current = false;
       console.log("UserContext: useEffect cleanup. Unsubscribing auth listener."); // Added log
       unsubscribeAuth();
-      // Ensure Firestore listener is also unsubscribed on component unmount
       if (unsubscribeFirestoreRef.current) {
         console.log("UserContext: useEffect cleanup. Unsubscribing Firestore listener."); // Added log
         unsubscribeFirestoreRef.current();
@@ -109,7 +108,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, [clearUser]); // Added clearUser to dependency array as it's used inside useEffect
 
   return (
-    <UserContext.Provider value={{ user, familyId, loadingAuth, loadingUserData, clearUser }}> {/* <-- ADDED clearUser here */}
+    <UserContext.Provider value={{ user, familyId, loadingAuth, loadingUserData, clearUser }}>
       {children}
     </UserContext.Provider>
   );

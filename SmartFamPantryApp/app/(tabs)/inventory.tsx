@@ -320,14 +320,14 @@ const InventoryScreen: React.FC = () => {
   return (
     <ScrollView style={styles.container}>
       {/* Conditional summary banner */}
-      {lowStockOrExpiringItems.length > 0 && (
+      {lowStockOrExpiringItems.length > 0 ? (
         <View style={styles.alertBanner}>
           <Text style={styles.alertText}>
             ⚠️ You have {lowStockOrExpiringItems.length} item
             {lowStockOrExpiringItems.length > 1 ? 's' : ''} expiring soon or low in stock!
           </Text>
         </View>
-      )}
+      ) : null}
 
       <Text style={styles.header}>🏡 Household Inventory</Text>
       <Text style={styles.subHeader}>Keep track of pantry & essentials</Text>

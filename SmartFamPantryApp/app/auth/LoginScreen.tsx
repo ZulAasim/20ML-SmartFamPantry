@@ -7,24 +7,21 @@ import { useRouter } from 'expo-router';
 const LoginScreen: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState(false); // Added loading state for button
+  const [loading, setLoading] = useState(false); 
   const router = useRouter();
 
   const handleLogin = async () => {
-    setLoading(true); // Set loading true
+    setLoading(true);
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      // No Alert.alert('Success', 'Logged in successfully!'); needed here anymore.
-      // The UserProvider in _layout.tsx will detect the login and fetch user data,
-      // then the router will transition automatically.
-      console.log('Login successful via Firebase Auth.'); // ADD THIS LINE
-      router.replace('../(tabs)/'); // Redirect to the main app tabs
-      console.log('Login: Redirected to ../(tabs)/'); // ADD THIS LINE
+      console.log('Login successful via Firebase Auth.');
+      router.replace('../(tabs)/');
+      console.log('Login: Redirected to ../(tabs)/');
     } catch (error: any) {
       Alert.alert('Error', error.message);
       console.error('Login Error:', error.message);
     } finally {
-      setLoading(false); // Set loading false
+      setLoading(false); 
     }
   };
 
@@ -52,7 +49,7 @@ const LoginScreen: React.FC = () => {
       />
 
       <Button title={loading ? "Logging In..." : "Login"} onPress={handleLogin} disabled={loading} />
-      {loading && <ActivityIndicator size="small" color="#0000ff" style={{ marginTop: 10 }} />}
+      {loading ? <ActivityIndicator size="small" color="#0000ff" style={{ marginTop: 10 }} /> : null}
 
       <View style={styles.signupPrompt}>
         <Text>Don't have an account?</Text>

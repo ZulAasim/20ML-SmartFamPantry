@@ -37,8 +37,12 @@ export default function Index() {
       <Text style={styles.tipTitle}>🌿 Health & Nutrition Tip</Text>
       <Text style={styles.tipText}>{randomTip}</Text>
 
-      <Link href="/inventory" style={styles.link}>📦 Go to Inventory</Link>
-      <Link href="/grocery-list" style={styles.link}>🛒 Go to Grocery List</Link>
+      <Link href="/inventory">
+        <Text style={styles.link}>📦 Go to Inventory</Text>
+      </Link>
+      <Link href="/grocery-list">
+        <Text style={styles.link}>🛒 Go to Grocery List</Text>
+      </Link>
     </Animated.View>
   );
 }
